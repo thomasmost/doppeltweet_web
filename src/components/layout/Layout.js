@@ -36,6 +36,8 @@ const Layout = ({ children }) => {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
+        <title>Doppeltweet</title>
+        <meta name="description" content="Tweet like yourself" />
       </Helmet>
       <Header />
       <main className="text-gray-900">{children}</main>
