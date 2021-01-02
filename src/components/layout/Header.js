@@ -10,20 +10,17 @@ const Header = () => (
         <div className="w-12 mr-3">
           <LogoIcon />
         </div>
-        Lander
+        Doppeltweet
       </div>
       <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" href="#features">
-          Features
+        <AnchorLink className="px-4" href="#how">
+          How
         </AnchorLink>
-        <AnchorLink className="px-4" href="#services">
-          Services
+        <AnchorLink className="px-4" href="#why">
+          Why
         </AnchorLink>
-        <AnchorLink className="px-4" href="#stats">
-          Stats
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#testimonials">
-          Testimonials
+        <AnchorLink className="px-4" href="#experiment">
+          The Experiment
         </AnchorLink>
       </div>
       <div className="hidden md:block">
