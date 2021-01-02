@@ -1,14 +1,13 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import Button from '../components/Button';
 import Card from '../components/Card';
-import CustomerCard from '../components/CustomerCard';
 import LabelText from '../components/LabelText';
 import Layout from '../components/layout/Layout';
-import SplitSection from '../components/SplitSection';
 import StatsBox from '../components/StatsBox';
-import customerData from '../data/customer-data';
 import HeroImage from '../svg/HeroImage';
-import SvgCharts from '../svg/SvgCharts';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 export default () => (
   <Layout>
@@ -22,12 +21,45 @@ export default () => (
             A Twitter app that uses GPT-3 to tweet exactly like you.
           </p>
           <p className="mt-8 md:mt-12">
-            <Button size="lg">Get Started</Button>
+            <Button onClick={() => toast.info('Coming soon...')} size="lg">
+              Get Started
+            </Button>
           </p>
-          <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>
+          <p className="mt-4 text-gray-600">This is your Twitter on GPT-3</p>
         </div>
         <div className="lg:w-1/2">
           <HeroImage />
+        </div>
+      </div>
+    </section>
+    <section id="what" className="py-20 lg:py-40">
+      <div className="container mx-auto">
+        <LabelText className="mb-8 text-gray-600 text-center">
+          Can GPT-3 learn to tweet like you?
+        </LabelText>
+        <div style={{ fontSize: '2em', textAlign: 'center' }}>Let&apos;s find out!</div>
+        {/* <div className="flex flex-col md:flex-row md:-mx-3">
+          {customerData.map(customer => (
+            <div key={customer.customerName} className="flex-1 px-3">
+              <CustomerCard customer={customer} />
+            </div>
+          ))}
+          </div> */}
+      </div>
+    </section>
+    <section id="why" className="py-20 lg:pt-32">
+      <div className="container mx-auto text-center">
+        <LabelText className="text-gray-600">Why is this a good experiment?</LabelText>
+        <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
+          <div className="w-full sm:w-1/3">
+            <StatsBox primaryText="500m" secondaryText="Tweets Sent Daily" />
+          </div>
+          <div className="w-full sm:w-1/3">
+            <StatsBox primaryText="330m" secondaryText="Active Twitter Users" />
+          </div>
+          <div className="w-full sm:w-1/3">
+            <StatsBox primaryText="553" secondaryText="Average Tweets per User-Year" />
+          </div>
         </div>
       </div>
     </section>
@@ -54,37 +86,6 @@ export default () => (
             </Card>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="why" className="py-20 lg:pt-32">
-      <div className="container mx-auto text-center">
-        <LabelText className="text-gray-600">Why is this a good experiment?</LabelText>
-        <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="500m" secondaryText="Tweets Sent Daily" />
-          </div>
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="330m" secondaryText="Active Twitter Users" />
-          </div>
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="553" secondaryText="Average Tweets per User-Year" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="experiment" className="py-20 lg:py-40">
-      <div className="container mx-auto">
-        <LabelText className="mb-8 text-gray-600 text-center">
-          Can GPT-3 learn to tweet like you?
-        </LabelText>
-        <div style={{ fontSize: '2em', textAlign: 'center' }}>Let&apos;s find out!</div>
-        {/* <div className="flex flex-col md:flex-row md:-mx-3">
-          {customerData.map(customer => (
-            <div key={customer.customerName} className="flex-1 px-3">
-              <CustomerCard customer={customer} />
-            </div>
-          ))}
-          </div> */}
       </div>
     </section>
     {/* <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
